@@ -1,0 +1,14 @@
+<div class="card col-6">
+  <img [src]="immagine" [alt]="nome + '' + cognome" />
+  <!-- le parentesi quadre su src servono quando vuoi assegnare ad un attributo html un valore del typescript -->
+  <div class="card-body">
+    <h5 class="card-title">{{ nome }} {{ cognome }}</h5>
+    <p class="card-text"></p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    <app-bottone [testo]="'Mostra'"></app-bottone>
+    <button (click)="delete(id)" class="btn btn-danger">Elimina</button>
+    <!-- usare il bottone per modificare gli elementi non è buona prassi -->
+    <!-- se ricevo informazioni da un set di dati devo andare a modificarle in quel set di dati -->
+    <!-- quindi in questo caso con uno splice su card-list-components -->
+  </div>
+</div>
